@@ -26,3 +26,7 @@ models:
         materialized: view
 
 on-run-end: {{ dbt_artifacts.upload_results(results) }}
+
+packages:
+  - package: brooklyn-data/dbt_artifacts
+    version: 2.8.0
