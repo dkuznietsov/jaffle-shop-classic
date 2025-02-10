@@ -25,7 +25,7 @@ models:
       staging:
         materialized: view
 
-on-run-end: {{ dbt_artifacts.upload_results(results) }}
+on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
 
 packages:
   - package: brooklyn-data/dbt_artifacts
